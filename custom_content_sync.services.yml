@@ -1,0 +1,9 @@
+services:
+  custom_content_sync.rss_feed_controller:
+    class: Drupal\custom_content_sync\Controller\RssFeedController
+    arguments: [ '@entity_type.manager' ]
+
+  custom_content_sync.commands:
+    class: \Drupal\custom_content_sync\Commands\SyncModuleCommands
+    tags:
+      - { name: drush.command }

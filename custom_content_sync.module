@@ -1,0 +1,13 @@
+<?php
+
+use Drupal\custom_content_sync\Controller\RssFeedController;
+
+/**
+ * Implements hook_cron().
+ */
+function custom_content_sync_cron() {
+  // Run the import logic from RssFeedController.
+  $controller = \Drupal::getContainer()->get('custom_content_sync.rss_feed_controller');
+  $controller->importRssFeed();
+}
+

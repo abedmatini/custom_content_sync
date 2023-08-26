@@ -1,0 +1,7 @@
+custom_content_sync.rss_feed_import:
+  path: '/import/rss-feed'
+  defaults:
+    _controller: '\Drupal\custom_content_sync\Controller\RssFeedController::importRssFeed'
+    _title: 'Import RSS Feed'
+  requirements:
+    _permission: 'access content'
